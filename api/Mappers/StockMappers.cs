@@ -31,4 +31,14 @@ public static class StockMappers
             MarketCap = stockDto.MarketCap
         };
     }
+
+    public static void UpdateStockFromDto(this Stock stock, UpdateStockRequestDto updatedStock)
+    {
+        stock.Symbol = updatedStock.Symbol;
+        stock.CompanyName = updatedStock.CompanyName;
+        stock.Dividend = updatedStock.Dividend;
+        stock.Purchase = updatedStock.Purchase;
+        stock.MarketCap = updatedStock.MarketCap;
+        stock.Industry = updatedStock.Industry;
+    }
 }
